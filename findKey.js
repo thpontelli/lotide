@@ -1,10 +1,12 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
+
+const assertEqual = require('./assertEqual');
 
 const findKey = function(obj, callback) {
   let objKeys = Object.keys(obj);         // Array of the Keys of the Object
@@ -43,3 +45,5 @@ assertEqual(findKey({
 }, x => x.stars === 2), "noma");
 
 assertEqual(findKey(newObj, x => x === "Emma Watson"), "HermioneGranger");
+
+module.exports = findKey;

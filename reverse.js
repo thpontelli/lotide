@@ -16,3 +16,5 @@ for (let j = 0; j < args.length; j++) {
 
 // olleh
 // eybdoog
+
+module.exports = reverseString;
